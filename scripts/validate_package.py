@@ -76,8 +76,9 @@ def validate_png(path: Path) -> None:
 def allowed_repositories(name: object) -> tuple[str, ...]:
     if not isinstance(name, str):
         return ()
-    repo = f"CompleteTech-LLC/{name}"
-    return (repo,) if name.endswith("-skill") else (repo, repo + "-skill")
+    names = (name,) if name.endswith("-skill") else (name, name + "-skill")
+    # Skills moved to CompleteTech-Skills; the old CompleteTech-LLC paths still redirect.
+    return tuple(f"{owner}/{repo}" for owner in ("CompleteTech-Skills", "CompleteTech-LLC") for repo in names)
 
 
 def activation_name(skill: str) -> str | None:

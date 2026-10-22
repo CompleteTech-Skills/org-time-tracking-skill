@@ -112,8 +112,15 @@ class PackageContractTests(unittest.TestCase):
         (self.root / "README.md").write_text("no navigation", encoding="utf-8")
         self.assertTrue(package.validate(self.root))
 
+    def test_current_and_former_owner_accepted(self):
+        for repository in ("CompleteTech-Skills/demo-skill", "CompleteTech-LLC/demo-skill"):
+            with self.subTest(repository=repository):
+                self.manifest["repository"] = repository
+                self.save()
+                self.assertEqual(package.validate(self.root), [])
+
     def test_ledger_install_name_and_links(self):
-        self.manifest.update(skill_name="ai-usage-ledger", repository="CompleteTech-LLC/ai-usage-ledger-skill", kind="usage-ledger", network_mode="operator-selected-hosts")
+        self.manifest.update(skill_name="ai-usage-ledger", repository="CompleteTech-Skills/ai-usage-ledger-skill", kind="usage-ledger", network_mode="operator-selected-hosts")
         self.save()
         (self.root / "SKILL.md").write_text("---\nname: ai-usage-ledger\n---\n", encoding="utf-8")
         (self.root / "ONBOARDING.md").write_text("[Read](README.md#demo) [Web](https://example.com) [Here](#here)", encoding="utf-8")

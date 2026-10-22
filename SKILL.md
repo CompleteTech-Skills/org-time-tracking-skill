@@ -6,7 +6,7 @@ version: 1.0.0
 metadata:
   openclaw:
     skillKey: org-time-tracking
-    homepage: https://github.com/CompleteTech-LLC/org-time-tracking-skill
+    homepage: https://github.com/CompleteTech-Skills/org-time-tracking-skill
     requires:
       bins:
         - python3
