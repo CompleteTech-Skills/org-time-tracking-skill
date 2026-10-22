@@ -15,7 +15,7 @@ Use this skill to track and bill time spent with one organization: it reads your
 Python 3.12 is the shared CI baseline.
 
 ```bash
-git clone https://github.com/CompleteTech-LLC/org-time-tracking-skill.git org-time-tracking
+git clone https://github.com/CompleteTech-Skills/org-time-tracking-skill.git org-time-tracking
 cd org-time-tracking
 python3 -m venv .venv
 . .venv/bin/activate

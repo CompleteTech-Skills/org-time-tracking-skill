@@ -19,8 +19,8 @@ Part of the CompleteTech LLC skill library. It reads the operator's own signed-i
 
 - Skill key: `org-time-tracking`
 - Version-ready metadata: `1.0.0`
-- Homepage: https://github.com/CompleteTech-LLC/org-time-tracking-skill
-- README: https://github.com/CompleteTech-LLC/org-time-tracking-skill#readme
+- Homepage: https://github.com/CompleteTech-Skills/org-time-tracking-skill
+- README: https://github.com/CompleteTech-Skills/org-time-tracking-skill#readme
 - Runtime binaries: `python3`
 - Python packages: `openpyxl==3.1.5`, `pyyaml==6.0.3` (optional logo embedding: `pillow==12.2.0`)
 - Windows only, optional: desktop Excel for `scripts/recalc_excel.ps1`
